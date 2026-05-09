@@ -1,0 +1,27 @@
+{
+  "name": "pokeneas",
+  "version": "1.0.0",
+  "description": "Pokédex de Pokeneas - personajes inspirados en Pokémon nacidos en Antioquia",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "lint": "eslint src/"
+  },
+  "keywords": ["pokeneas", "antioquia", "pokedex", "express"],
+  "author": "Pokeneas Team",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

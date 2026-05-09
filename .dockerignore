@@ -1,0 +1,16 @@
+# =============================================
+# .dockerignore - Pokeneas
+# =============================================
+# Archivos que NO se copiarán dentro de la imagen Docker
+
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+.dockerignore
+README.md
+*.md
+.vscode
+coverage
+logs

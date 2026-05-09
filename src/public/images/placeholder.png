@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#2d5016" rx="20"/>
+  <circle cx="100" cy="80" r="45" fill="none" stroke="#c9973a" stroke-width="3"/>
+  <circle cx="100" cy="80" r="20" fill="#c9973a" opacity="0.4"/>
+  <line x1="55" y1="80" x2="145" y2="80" stroke="#c9973a" stroke-width="3"/>
+  <text x="100" y="155" text-anchor="middle" fill="#c9973a" font-family="serif" font-size="13">Pokenea</text>
+  <text x="100" y="172" text-anchor="middle" fill="rgba(201,151,58,0.6)" font-family="monospace" font-size="10">imagen no disponible</text>
+</svg>
