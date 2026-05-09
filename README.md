@@ -1,10 +1,10 @@
-# 🌿 Pokeneas de Antioquia
+# Pokeneas de Antioquia
 
 > Pokédex de personajes inspirados en Pokémon, nacidos en las tierras de Antioquia.
 
 ---
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
 1. [Descripción del Proyecto](#descripción)
 2. [Arquitectura](#arquitectura)
@@ -427,49 +427,3 @@ http://<IP_PUBLICA>:3000/pokenea
 Observa cómo el ID del contenedor cambia entre peticiones (balanceo de carga round-robin).
 
 ---
-
-## Troubleshooting
-
-### ❌ Error: Cannot find module 'dotenv'
-```bash
-npm install
-```
-
-### ❌ La imagen del Pokenea no carga
-- Verifica que el bucket de GCS sea público: `gsutil iam get gs://pokeneas-bucket`
-- Verifica que el nombre del archivo en GCS coincida exactamente con el de `pokeneas.js`
-- Verifica la variable `GCS_BUCKET_URL`
-
-### ❌ Docker: permission denied
-```bash
-sudo usermod -aG docker $USER
-newgrp docker
-```
-
-### ❌ Docker Swarm: no puede conectarse al líder
-- Verifica que el firewall de GCP tenga abiertos los puertos 2377, 7946 y 4789
-- Verifica que estás usando la IP interna (no la pública) en `--advertise-addr`
-
-### ❌ El contenedor ID no cambia
-- El balanceo de carga ocurre, pero el navegador puede tener caché
-- Usa `curl` en lugar del navegador, o abre en modo incógnito
-- Verifica que el servicio tenga las 10 réplicas: `docker service ls`
-
-### ❌ GitHub Actions falla: unauthorized
-- Verifica que los secrets `DOCKERHUB_USERNAME` y `DOCKERHUB_TOKEN` estén correctos
-- Regenera el Access Token en DockerHub si ha expirado
-
----
-
-## Buenas Prácticas Aplicadas
-
-- ✅ Arquitectura en capas (config, controllers, services, routes, data, utils)
-- ✅ Variables de entorno con dotenv (nunca hardcodeadas)
-- ✅ Usuario no-root en el contenedor Docker
-- ✅ `.dockerignore` para imágenes más pequeñas
-- ✅ Caché de capas en Dockerfile (dependencias antes que código)
-- ✅ Manejo centralizado de errores
-- ✅ ES Modules consistentes en todo el proyecto
-- ✅ Código comentado y documentado con JSDoc
-- ✅ CI/CD con GitHub Actions
-- ✅ Imagen Alpine para reducir el tamaño del contenedor

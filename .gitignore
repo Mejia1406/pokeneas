@@ -1,29 +1,12 @@
-# =============================================
-# .gitignore - Pokeneas
-# =============================================
-
-# Dependencias de Node
 node_modules/
-
-# Variables de entorno reales (NUNCA subir al repo)
 .env
-
-# Logs
 logs/
 *.log
 npm-debug.log*
-
-# Directorio de build/dist
 dist/
-
-# Archivos del sistema operativo
 .DS_Store
 Thumbs.db
-
-# IDE
 .vscode/
 .idea/
 *.swp
-
-# Cobertura de tests
 coverage/

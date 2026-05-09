@@ -11,7 +11,6 @@
     rel="stylesheet"
   />
   <style>
-    /* ─── Variables ───────────────────────────────────────── */
     :root {
       --gold:      #c9973a;
       --gold-dark: #8a6218;
@@ -25,7 +24,6 @@
       --shadow: 0 20px 60px rgba(0,0,0,0.35);
     }
 
-    /* ─── Reset & Base ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -43,7 +41,6 @@
       color: var(--cream);
     }
 
-    /* ─── Card ───────────────────────────────────────────── */
     .card {
       background: linear-gradient(145deg, rgba(26,18,7,0.92), rgba(61,112,34,0.85));
       backdrop-filter: blur(12px);
@@ -61,7 +58,6 @@
       to   { opacity: 1; transform: translateY(0);    }
     }
 
-    /* ─── Header strip ───────────────────────────────────── */
     .card__header {
       background: linear-gradient(90deg, var(--gold-dark), var(--gold));
       padding: 0.6rem 1.5rem;
@@ -90,7 +86,6 @@
       letter-spacing: 0.08em;
     }
 
-    /* ─── Image area ─────────────────────────────────────── */
     .card__image-wrap {
       position: relative;
       background: radial-gradient(circle at 50% 60%, rgba(201,151,58,0.15), transparent 70%);
@@ -129,7 +124,6 @@
       50%       { transform: translateY(-10px); }
     }
 
-    /* ─── Name ───────────────────────────────────────────── */
     .card__name {
       font-size: 2.1rem;
       font-weight: 700;
@@ -139,7 +133,6 @@
       text-shadow: 0 2px 12px rgba(201,151,58,0.4);
     }
 
-    /* ─── Quote ──────────────────────────────────────────── */
     .card__quote-wrap {
       padding: 1.2rem 2rem 0.6rem;
       position: relative;
@@ -167,7 +160,6 @@
       z-index: 1;
     }
 
-    /* ─── Footer ─────────────────────────────────────────── */
     .card__footer {
       border-top: 1px solid rgba(201,151,58,0.15);
       padding: 0.9rem 1.5rem;
@@ -221,7 +213,6 @@
 
     .card__refresh-btn:active { transform: translateY(0); }
 
-    /* ─── Nav links ──────────────────────────────────────── */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -243,7 +234,6 @@
 
     .nav-links a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
-    /* ─── Responsive ─────────────────────────────────────── */
     @media (max-width: 520px) {
       .card__image { width: 170px; height: 170px; }
       .card__name  { font-size: 1.7rem; }
@@ -254,16 +244,13 @@
 <body>
 
   <div>
-    <!-- ── Tarjeta principal ── -->
     <div class="card">
 
-      <!-- Header con nombre de la app e ID de la instancia -->
       <div class="card__header">
         <span class="card__header-title">✦ Pokeneas de Antioquia</span>
         <span class="card__id-badge">#<%= id.toString().padStart(3, '0') %></span>
       </div>
 
-      <!-- Imagen del Pokenea -->
       <div class="card__image-wrap">
         <span class="card__pokenea-number">No. <%= id.toString().padStart(3, '0') %></span>
         <img
@@ -274,16 +261,13 @@
         />
       </div>
 
-      <!-- Nombre -->
       <h1 class="card__name"><%= nombre %></h1>
 
-      <!-- Frase filosófica -->
       <div class="card__quote-wrap">
         <span class="card__quote-mark">"</span>
         <p class="card__quote"><%= frase %></p>
       </div>
 
-      <!-- Footer con ID del contenedor y botón de recarga -->
       <div class="card__footer">
         <div class="card__container-info">
           <span class="card__container-label">Docker Container</span>
@@ -294,7 +278,6 @@
 
     </div>
 
-    <!-- Links de navegación -->
     <nav class="nav-links">
       <a href="/pokenea">Vista Visual</a>
       <a href="/api/pokenea">API JSON</a>

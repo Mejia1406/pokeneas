@@ -1,29 +1,17 @@
-/**
- * data/pokeneas.js
- * ─────────────────────────────────────────────────────
- * Fuente de datos local: arreglo de Pokeneas.
- * No se usa base de datos; los datos están "quemados" aquí
- * siguiendo el requisito del taller.
- *
- * Las URLs de imagen apuntan al Bucket público de GCS.
- * Reemplaza GCS_BUCKET_URL por la URL real de tu bucket.
- */
-
 import env from '../config/env.js';
 
 const BASE = env.gcsBucketUrl;
 
 /**
- * @typedef {Object} Pokenea
- * @property {number}  id        - Identificador único
- * @property {string}  nombre    - Nombre del Pokenea
- * @property {string}  altura    - Altura en metros
- * @property {string}  habilidad - Habilidad especial
- * @property {string}  imagen    - URL pública en GCS
- * @property {string}  frase     - Frase filosófica antioqueña
+ * Estructura de un Pokenea:
+ * - id: identificador único
+ * - nombre: nombre del Pokenea
+ * - altura: altura del Pokenea
+ * - habilidad: habilidad especial
+ * - imagen: URL pública de la imagen
+ * - frase: frase filosófica
  */
 
-/** @type {Pokenea[]} */
 const pokeneas = [
   {
     id: 1,
