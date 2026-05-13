@@ -3,10 +3,10 @@ import {
   getPokeneaParaVista,
 } from '../services/pokeneaService.js';
 
-/**
- * GET /api/pokenea
- * Devuelve un Pokenea aleatorio en formato JSON.
- */
+export function redirectToPokenea(req, res) {
+  return res.redirect(302, '/pokenea');
+}
+
 export function getPokeneaJSON(req, res, next) {
   try {
     const data = getPokeneaParaJSON();
@@ -17,10 +17,6 @@ export function getPokeneaJSON(req, res, next) {
   }
 }
 
-/**
- * GET /pokenea
- * Renderiza un Pokenea aleatorio con imagen y frase filosófica.
- */
 export function getPokeneaVista(req, res, next) {
   try {
     const data = getPokeneaParaVista();

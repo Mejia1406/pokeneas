@@ -2,7 +2,6 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-import env from './config/env.js';
 import requestLogger from './middlewares/requestLogger.js';
 import {
   notFoundHandler,
@@ -28,11 +27,5 @@ app.use('/', pokeneaRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
-
-app.listen(env.port, () => {
-  console.log(`🌿 Pokeneas ejecutándose en el puerto ${env.port}`);
-  console.log(`→ http://localhost:${env.port}/pokenea`);
-  console.log(`→ http://localhost:${env.port}/api/pokenea`);
-});
 
 export default app;

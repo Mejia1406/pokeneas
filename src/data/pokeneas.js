@@ -58,7 +58,7 @@ const pokeneas = [
     nombre: 'Corocorín',
     altura: '0.40 m',
     habilidad: 'Canto al Amanecer',
-    imagen: `${BASE}/corocorин.png`,
+    imagen: `${BASE}/corocorin.png`,
     frase: 'Quien canta, sus males espanta; quien trabaja, sus deudas rebaja.',
   },
   {
